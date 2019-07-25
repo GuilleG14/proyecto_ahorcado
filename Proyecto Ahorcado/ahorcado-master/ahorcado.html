@@ -1,0 +1,175 @@
+<html>
+
+<head>
+
+    <title>
+        Ahorcado
+    </title>
+
+    <style type="text/css">
+    
+        @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+        body{
+            background-image: url(/Users/Alber/Documents/Codenotch/ahorcado/blackboard.jpg);
+            background-size: cover;
+            color: white;
+        }
+        
+        h1{
+            font-family: 'Indie Flower', cursive;
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: -10px;
+            font-size: 70;
+        }
+
+        h3#authors{
+            font-family: 'Indie Flower', cursive;
+            color: white;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        h3#tittle{
+            font-family: 'Indie Flower', cursive;
+            color: white;
+            text-align: center;
+            font-size: 30;
+        }
+
+        h2{
+            text-align: center;
+            font-family: 'Indie Flower', cursive;
+            font-size: 40;
+        }
+
+        div#keyboard{
+            text-align: center;
+        }
+
+        div#keyboard2{
+            text-align: center;
+        }
+
+        input#write{
+            width: 120px;
+            height: 50px;
+            margin-bottom: 10px;
+            font-family: 'Indie Flower', cursive;
+            font-weight: bold;
+            font-size: 14pt;
+            color: white;
+            background-color: #212121;
+            display: inline;
+        }
+
+        input#letter{
+            display: inline;
+        }
+
+        input#playAgain{
+            width: 180px;
+            height: 50px;
+            margin-bottom: 10px;
+            font-family: 'Indie Flower', cursive;
+            font-weight: bold;
+            font-size: 14pt;
+            color: white;
+            background-color: red;
+            display: none;
+        }
+
+        button:hover{
+            border-style: solid;
+            border-color: #E63946;
+            border-width: 3px;
+        }
+
+        input{
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            font-family: 'Indie Flower', cursive;
+            font-size: 16;
+            background-color: #212121;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        input::placeholder{
+            color: white;
+            opacity: 0.5;
+            font-family: 'Indie Flower', cursive;
+            text-align: center;
+        }
+
+        div#lettersUsed{
+            font-family: 'Indie Flower', cursive;
+            margin: 25px auto 0 ;
+            text-align: center;
+            color: white;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        div#lifes{
+            text-align: center;
+        }
+
+        img#image{
+            width: 300px;
+        }
+
+        div#notValid{
+            width: 30%;
+            margin: 0 auto;
+            text-align: center;
+            font-family: 'Indie Flower', cursive;
+            font-size: 14pt;
+            color: orange;
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>
+AHORCADO
+</h1>
+
+<h3 id="authors">
+Lexa  -  Guille  -  Graham  -  Alber
+</h3>
+
+<h3 id="tittle">
+    ¿Serás capaz de adivinar el refrán?
+</h3>
+
+<h2 id="sentence"></h2>
+
+<div id="keyboard">
+    <input type="text" id="letter" placeholder="Introduce una letra" maxlength="1" pattern="[A-Za-z]"></input>
+    <input type="submit" id="write" onclick="letterIntro()" onsubmit="return letterintro()" accesskey=”1″ value="Enviar"></input>
+</div>
+
+<div id="keyboard2">
+    <input type="submit" id="playAgain" onclick="location.reload()" accesskey=”1″ value="Volver a jugar"></input>
+</div>
+
+<div id="notValid">
+    ¡Carácter no válido!
+</div>
+
+<div id="lettersUsed">Letras utilizadas: <span id="lettersUsed2"></span></div>
+<div id="lifes"><img id="image" src="/Users/Alber/Documents/Codenotch/ahorcado/0.png"></div>
+
+
+<script type="text/javascript" src="ahorcado.js"></script>
+</body>
+
+</html>
